@@ -1,0 +1,154 @@
+/* Mobie & Tablet */
+
+@media (max-width: 1023px) {
+     :root {
+        --header-height: 70px;
+        --header-nav-height: 0px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+    }
+    .header-cart {
+        width: 80px;
+    }
+    .header-cart__wrap {
+        margin: 0;
+        margin-left: auto;
+    }
+    .header-cart__list {
+        position: fixed;
+        width: 100%;
+        top: var(--header-height);
+        right: 0px;
+        background: white;
+        box-shadow: 0px 1px 10px 5px #0000001a;
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        min-height: 180px;
+        z-index: 100;
+    }
+    .header-cart__list::after {
+        display: none;
+    }
+    .header__has-cart-list {
+        max-height: 40vh;
+    }
+    .container {
+        margin-top: calc(var(--header-height) + var( --header-sort-bar));
+    }
+    .header-sort-bar {
+        display: flex;
+    }
+    .footer__content {
+        padding: 0 20px;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 740px) and (max-width:1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+
+
+/* Mobie */
+
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .header-with-search {
+        justify-content: space-between;
+        padding: 0 16px;
+        gap: 10px;
+        position: relative;
+    }
+    .header-with-search::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, #ee3e28, #fe562e);
+        background-color: rebeccapurple;
+        z-index: 2;
+    }
+    .header-search-btn-mobile {
+        display: block;
+    }
+    .header-logo {
+        width: unset;
+        margin: 0;
+        padding: 0;
+    }
+    .header-logo a {
+        line-height: 0;
+    }
+    #mobile-search-btn:checked~.header-search {
+        transform: translateY(0);
+    }
+    .header-search {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: var(--header-sort-bar);
+        padding: 0 5px;
+        transform: translateY(-100%);
+        transition: .3s;
+    }
+    .header-search-btn-mobile {
+        font-size: 3rem;
+        color: var(--white-color);
+    }
+    .header-cart {
+        width: unset;
+        margin-right: 10px;
+    }
+    .header-cart__icon {
+        padding: 10px;
+        font-size: 3.4rem;
+    }
+    .header-search__input:focus~.header-search__input-history {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.1s ease;
+    }
+    .container {
+        padding: 16px 8px;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer-download {
+        justify-content: center;
+    }
+    .footer-app {
+        width: unset;
+    }
+    .home-category-mobile__list {
+        display: flex;
+    }
+    .pagination {
+        gap: unset;
+        justify-content: space-evenly;
+    }
+    .pagination-link {
+        min-width: 30px;
+        height: 30px;
+    }
+}
